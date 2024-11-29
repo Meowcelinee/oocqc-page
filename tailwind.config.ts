@@ -14,5 +14,9 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@catppuccin/tailwindcss')({
+      defaultFlavour: 'macchiato',
+    }),
+  ],
 } satisfies Config;
