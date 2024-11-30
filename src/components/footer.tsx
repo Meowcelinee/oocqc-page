@@ -3,8 +3,8 @@ import Link from 'next/link';
 export default function Footer() {
     return (
         <>
-            <footer className='bg-mantle py-3 px-2 text-subtext0'>
-                <p className='font-light'>
+            <footer className='bg-mantle py-3 px-2 text-subtext0 text-sm font-light'>
+                <p className='my-1'>
                     Site by{' '}
                     <Link
                         href='https://github.com/Nyatalieeee/'
@@ -14,14 +14,14 @@ export default function Footer() {
                         Natalie Raine
                     </Link>
                 </p>
-                <p className='font-light'>
+                <p className='my-1'>
                     Made with{' '}
                     <span className='text-maroon font-normal'>{'<3'}</span>
                 </p>
                 <div className='mx-auto my-2'>
                     <hr className='border-surface1 mx-2' />
                 </div>
-                <p className='text-sm text-subtext0'>
+                <p className='text-subtext0'>
                     This site is not officially affiliated with{' '}
                     <Link
                         href='https://queercraft.net/'
