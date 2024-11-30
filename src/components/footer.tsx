@@ -21,8 +21,8 @@ export default function Footer() {
                 <div className='mx-auto my-2'>
                     <hr className='border-surface1 mx-2' />
                 </div>
-                <p className='text-subtext0'>
-                    This site is not officially affiliated with{' '}
+                <p className='text-subtext0 text-xs'>
+                    This site is not affiliated with, or endorsed by{' '}
                     <Link
                         href='https://queercraft.net/'
                         target='_blank'
@@ -30,7 +30,7 @@ export default function Footer() {
                     >
                         Queercraft
                     </Link>{' '}
-                    and/or Prism.
+                    or Prism.
                 </p>
             </footer>
         </>
