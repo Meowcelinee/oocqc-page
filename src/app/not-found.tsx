@@ -3,14 +3,14 @@ import Link from 'next/link';
 export default function NotFound() {
     return (
         <>
-            <div className='mocha bg-gradient-to-br from-mantle via-crust to-mantle'>
-                <div className='flex flex-col justify-center items-center h-screen w-screen'>
-                    <div className='flex flex-col w-1/3 justify-center'>
+            <div className='bg-crust md:py-20 py-28'>
+                <div className='flex flex-col justify-center items-center'>
+                    <div className='flex flex-col md:w-1/3 w-2/3 justify-center'>
                         <div className='block mx-auto my-4 align-middle text-center '>
                             <h1 className='text-4xl'>:(</h1>
                         </div>
 
-                        <hr className='my-8 border-surface2' />
+                        <hr className='md:my-8 my-12 border-surface2' />
 
                         <div className='my-3 mx-auto font-semibold text-xl text-center'>
                             That page doesn't exist.
