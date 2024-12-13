@@ -1,11 +1,10 @@
 import type { Metadata } from 'next';
-import Footer from '@/components/footer';
-import '../styles/globals.css';
-import { usePathname } from 'next/navigation';
+import Footer from '@/components/Footer';
+import '@/styles/globals.css';
 import Header from '@/components/header/Header';
 
 export const metadata: Metadata = {
-    title: 'OOCQC Page',
+    title: 'OOCQC',
     description: 'Every single noteworthy quote from the OOCQC thread',
 };
 
