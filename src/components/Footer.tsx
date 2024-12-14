@@ -9,7 +9,7 @@ export default function Footer() {
                     <Link
                         href='https://github.com/Nyatalieeee/'
                         target='_blank'
-                        className='underline text-subtext1 transition duration-200 hover:text-subtext1'
+                        className='underline text-overlay2 transition duration-200 hover:text-subtext1'
                     >
                         Natalie Raine
                     </Link>
