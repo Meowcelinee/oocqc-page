@@ -5,13 +5,13 @@ interface Quote {
     person: string;
 }
 
-const validQuotes = rawQuotes.map(quote => {
+const validQuotes = rawQuotes.map((quote: string): Quote => {
     const splitQuote = quote.split(' -');
-    const quoteObj: Quote = {
-        quote: splitQuote[0],
+    const finalQuote = splitQuote[0].replaceAll(`"`, ``);
+    return {
+        quote: finalQuote,
         person: splitQuote[1],
     };
-    return quoteObj;
 });
 
 export default validQuotes;
