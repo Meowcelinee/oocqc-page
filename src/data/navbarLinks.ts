@@ -8,12 +8,17 @@ const navbarLinks: NavbarLink[] = [
     {
         title: 'Search',
         link: '/search',
-        iconClassName: 'my-auto nf nf-fa-magnifying_glass',
+        iconClassName: 'nf-fa-magnifying_glass',
     },
     {
         title: 'List',
         link: '/list',
-        iconClassName: 'my-auto nf nf-md-format_list_bulleted',
+        iconClassName: 'nf-md-format_list_bulleted',
+    },
+    {
+        title: 'Download',
+        link: '/download',
+        iconClassName: 'nf-oct-download',
     },
 ];
 

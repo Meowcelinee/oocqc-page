@@ -22,7 +22,7 @@ export default function NavbarLinks() {
                     }
                 )}
             >
-                <i className={link.iconClassName}></i>
+                <i className={`my-auto nf ${link.iconClassName}`}></i>
                 <p className='text-lg ml-1'>{link.title}</p>
             </Link>
         );
