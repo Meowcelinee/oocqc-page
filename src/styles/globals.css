@@ -4,6 +4,11 @@
 /* Nerd font icons */
 @import url('https://www.nerdfonts.com/assets/css/webfont.css');
 
+::selection {
+    background-color: #b7bdf8;
+    color: #181926;
+}
+
 body {
     font-family: 'Hind Vadodara';
 }
