@@ -12,7 +12,7 @@ export default function Header() {
                     <Image
                         width={176}
                         height={43}
-                        src='/images/icon.png'
+                        src='/images/logos/icon.png'
                         alt=''
                         className='mr-4 transition duration-200 hover:brightness-75 hover:opacity-90'
                     />
