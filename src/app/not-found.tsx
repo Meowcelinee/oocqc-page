@@ -7,7 +7,7 @@ export default function NotFound() {
                 <div className='flex flex-col justify-center items-center'>
                     <div className='flex flex-col md:w-1/3 w-2/3 justify-center'>
                         <div className='block mx-auto my-4 align-middle text-center '>
-                            <h1 className='text-4xl'>:(</h1>
+                            <h1 className='md:text-6xl text-5xl'>:(</h1>
                         </div>
 
                         <hr className='md:my-8 my-12 border-surface2' />
@@ -17,7 +17,7 @@ export default function NotFound() {
                         </div>
                         <Link
                             href='/'
-                            className='bg-surface0 my-3 px-3 py-2 rounded-lg mx-auto transition-all duration-300 text-subtext1 hover:bg-pink hover:text-crust'
+                            className='bg-surface0 my-3 px-3 py-2 rounded-lg mx-auto transition-all duration-300 text-subtext1 hover:bg-sky hover:text-crust'
                         >
                             <i className='nf nf-cod-arrow_left mr-2'></i>Go home
                         </Link>
