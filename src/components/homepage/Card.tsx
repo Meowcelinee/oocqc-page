@@ -72,7 +72,7 @@ export default function HomepageCards() {
                         width={card.imageWidth}
                         height={card.imageHeight}
                         src={card.image}
-                        className='md:my-auto mt-4 md:m-0 mx-auto rounded-lg'
+                        className='md:my-auto mt-4 md:m-0 mx-auto rounded-lg transition duration-500 hover:-translate-y-3'
                         alt={card.alt}
                     />
                 </div>

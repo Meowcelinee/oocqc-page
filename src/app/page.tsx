@@ -1,5 +1,6 @@
 import Tagline from '@/components/homepage/Tagline';
 import HomepageCards from '@/components/homepage/Card';
+import AboutCard from '@/components/homepage/About';
 
 export default function Home() {
     return (
@@ -8,6 +9,9 @@ export default function Home() {
                 <Tagline />
                 <section>
                     <HomepageCards />
+                </section>
+                <section>
+                    <AboutCard />
                 </section>
             </div>
         </>
