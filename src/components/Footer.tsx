@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function Footer() {
     return (
         <>
-            <footer className='bg-mantle py-3 px-2 text-subtext0 text-sm font-light'>
+            <footer className='py-3 px-2 text-subtext0 text-sm font-light'>
                 <p className='my-1'>
                     Site by{' '}
                     <Link
