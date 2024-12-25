@@ -11,7 +11,10 @@ export default function Contact() {
                 <div className='flex flex-col justify-center md:mx-8 mx-auto'>
                     {authors.map(author => {
                         return (
-                            <div className='bg-mantle rounded-md py-3 px-4 my-4 md:mx-0 mx-4 transition duration-200 hover:brightness-110'>
+                            <div
+                                className='bg-mantle rounded-md py-3 px-4 my-4 md:mx-0 mx-4 transition duration-200 hover:brightness-110'
+                                key={author.name}
+                            >
                                 <h3 className='text-xl font-medium'>
                                     {author.name}
                                 </h3>
