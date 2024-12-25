@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function Footer() {
     return (
         <>
-            <footer className='py-3 px-2 text-subtext0 text-sm font-light'>
+            <footer className='py-4 px-2 text-subtext0 text-sm font-light'>
                 <p className='my-1'>
                     Site by{' '}
                     <Link
@@ -21,7 +21,7 @@ export default function Footer() {
                 <div className='mx-auto my-2'>
                     <hr className='border-surface1 mx-2' />
                 </div>
-                <p className='text-subtext0 text-xs'>
+                <p className='text-subtext0 text-xs my-1'>
                     This site is not affiliated with, or endorsed by{' '}
                     <Link
                         href='https://queercraft.net/'
