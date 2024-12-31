@@ -19,7 +19,7 @@ const homepageCards: HomepageCard[] = [
         image: '/images/packpreview.png',
         imageHeight: 300,
         imageWidth: 300,
-        link: '/download',
+        link: '/pack',
         linkText: 'Get the resource pack!',
     },
     {
@@ -62,7 +62,7 @@ export default function HomepageCards() {
                         </p>
                         <Link
                             href={card.link}
-                            className={`flex mx-auto my-5 px-4 py-3 rounded-lg bg-sky text-crust font-medium md:text-lg drop-shadow-lg transition duration-200 hover:bg-surface0 hover:text-text`}
+                            className={`flex mx-auto my-5 px-4 py-3 rounded-lg bg-sky text-crust font-medium md:text-lg drop-shadow-lg transition duration-300 hover:bg-surface0 hover:text-text`}
                         >
                             <p>{card.linkText}</p>
                             <i className='my-auto ml-2 nf nf-cod-arrow_right'></i>

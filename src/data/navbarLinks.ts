@@ -16,9 +16,9 @@ const navbarLinks: NavbarLink[] = [
         iconClassName: 'nf-md-format_list_bulleted',
     },
     {
-        title: 'Download',
-        link: '/download',
-        iconClassName: 'nf-oct-download',
+        title: 'Pack',
+        link: '/pack',
+        iconClassName: 'nf-md-folder_multiple_outline',
     },
 ];
 
