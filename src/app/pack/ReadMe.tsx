@@ -12,13 +12,27 @@ const reviews = [
 export default function ReadMe() {
     return (
         <>
-            <p className='text-subtext0 font-medium italic border-b-2 border-b-surface2 pb-1'>
-                README.md
-            </p>
+            <div className='flex gap-4 border-b-2 border-b-surface2'>
+                <p className='text-subtext0 text-lg font-medium italic pb-1'>
+                    README.md
+                </p>
+                <p>|</p>
+                <Link
+                    className='text-subtext0 md:text-lg font-medium italic underline pb-1 transition duration-300 hover:text-text'
+                    href='https://github.com/Nyatalieeee/OOCQC'
+                    target='_blank'
+                >
+                    View source
+                </Link>
+            </div>
             <h1 className='my-3 md:text-4xl text-3xl font-semibold'>
                 Out of Context QC (OOCQC)
             </h1>
-            <div className='text-lg'>
+            <div
+                className='text-lg'
+                // literally fuck off
+                key={Math.floor(Math.random() * reviews.length)}
+            >
                 <Link target='_blank' href='/images/gh-preview.png'>
                     <Image
                         width={400}

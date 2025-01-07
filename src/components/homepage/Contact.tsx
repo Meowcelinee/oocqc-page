@@ -12,7 +12,7 @@ export default function Contact() {
                     {authors.map(author => {
                         return (
                             <div
-                                className='bg-mantle rounded-md py-3 px-4 my-4 md:mx-0 mx-4 transition duration-200 hover:brightness-110'
+                                className='bg-mantle rounded-r-md rounded-l-none border-l-4 border-l-surface2 py-3 px-4 my-4 md:mx-0 mx-4 transition duration-200 hover:brightness-110'
                                 key={author.name}
                             >
                                 <h3 className='text-xl font-medium'>
