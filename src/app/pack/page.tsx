@@ -10,11 +10,14 @@ export default function DownloadPage() {
                     <h1 className='md:my-8 my-5 md:text-5xl text-4xl text-center font-semibold drop-shadow-lg'>
                         The OOCQC Resource Pack
                     </h1>
-                    <Link className='text-center w-full' href='#releases'>
-                        <p className='text-center text-subtext1 md:text-xl text-lg my-4 underline transition duration-300 hover:text-sky'>
+                    <div className='flex'>
+                        <Link
+                            className='bg-surface0 rounded-md px-3 py-2 md:my-5 my-3 mx-auto text-subtext0 transition duration-200 hover:bg-surface1 hover:text-subtext1'
+                            href='#releases'
+                        >
                             Scroll to downloads
-                        </p>
-                    </Link>
+                        </Link>
+                    </div>
 
                     <div className='bg-mantle rounded-lg border-[1px] border-surface1 py-2 px-4'>
                         <ReadMe />
