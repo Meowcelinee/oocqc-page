@@ -28,7 +28,7 @@ export default function AboutCard() {
                         />
                     </div>
                 </div>
-                <div className='text-center justify-center my-auto md:mx-0 mx-auto py-4 text-medium tracking-wider md:w-1/3 w-5/6 rounded-lg transition duration-500 hover:bg-crust'>
+                <div className='text-center justify-center my-auto md:mx-0 mx-auto py-4 md:px-3 px-2 text-medium tracking-wider md:w-1/3 w-5/6 rounded-lg transition duration-500 hover:bg-crust'>
                     <h2
                         className='md:text-3xl text-2xl font-semibold my-4'
                         id='oocqc'

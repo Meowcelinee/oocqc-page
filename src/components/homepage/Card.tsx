@@ -1,37 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import classNames from 'classnames';
-
-interface HomepageCard {
-    alt: string;
-    description: string;
-    image: string;
-    imageHeight: number;
-    imageWidth: number;
-    link: string;
-    linkText: string;
-}
-
-const homepageCards: HomepageCard[] = [
-    {
-        alt: '',
-        description: 'A new quote. Every time the game is launched.',
-        image: '/images/packpreview.png',
-        imageHeight: 300,
-        imageWidth: 300,
-        link: '/pack',
-        linkText: 'Get the resource pack!',
-    },
-    {
-        alt: '',
-        description: 'Need to search for a quote?',
-        image: '/images/search.svg',
-        imageHeight: 250,
-        imageWidth: 250,
-        link: '/search',
-        linkText: 'Find a quote!',
-    },
-];
+import homepageCards from '@/data/homepageCards';
 
 export default function HomepageCards() {
     return homepageCards.map((card, cardIndex) => {
@@ -69,8 +39,8 @@ export default function HomepageCards() {
                         </Link>
                     </div>
                     <Image
-                        width={card.imageWidth}
-                        height={card.imageHeight}
+                        width={card.image.width}
+                        height={card.image.height}
                         src={card.image}
                         className='md:my-auto mt-4 md:m-0 mx-auto rounded-lg transition duration-500 hover:-translate-y-3'
                         alt={card.alt}

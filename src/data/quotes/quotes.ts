@@ -1,9 +1,6 @@
 import rawQuotes from './rawQuotes';
 
-interface Quote {
-    quote: string;
-    person: string;
-}
+type Quote = { quote: string; person: string };
 
 const validQuotes = rawQuotes.map((quote: string): Quote => {
     const splitQuote = quote.split(' -');

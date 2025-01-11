@@ -1,7 +1,4 @@
-interface AuthorLink {
-    title: string;
-    url: string;
-}
+type AuthorLink = { name: string; url: string };
 
 interface Author {
     name: string;
@@ -16,11 +13,11 @@ const natalie: Author = {
     discord: 'nyatalieeee',
     mc: 'Natalesbian',
     github: {
-        title: 'Nyatalieeee',
+        name: 'Nyatalieeee',
         url: 'https://github.com/Nyatalieeee',
     },
     website: {
-        title: 'nyatalie.pages.dev',
+        name: 'nyatalie.pages.dev',
         url: 'https://nyatalie.pages.dev/',
     },
 };
@@ -30,7 +27,7 @@ const amelia: Author = {
     discord: 'nyameliaaaa',
     mc: 'Nyameliaaaa',
     github: {
-        title: 'Nyameliaaaa',
+        name: 'Nyameliaaaa',
         url: 'https://github.com/Nyameliaaaa',
     },
 };
