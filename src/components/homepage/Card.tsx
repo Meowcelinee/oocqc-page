@@ -19,20 +19,34 @@ export default function HomepageCards() {
             >
                 <div
                     className={classNames(
-                        'flex md:justify-center flex-col-reverse',
+                        'animate-appearLonger flex md:justify-center flex-col-reverse',
                         {
                             'md:flex-row': !oddCard,
                             'md:flex-row-reverse': oddCard,
                         }
                     )}
                 >
-                    <div className='flex flex-col justify-center md:mx-4 text-center md:w-1/4'>
+                    <div
+                        className={classNames(
+                            'flex flex-col justify-center md:mx-4 md:w-1/4',
+                            {
+                                'md:text-left text-center': !oddCard,
+                                'text-center': oddCard,
+                            }
+                        )}
+                    >
                         <p className='md:text-2xl font-semibold text-xl text-subtext1 mx-auto md:mt-0 mt-4'>
                             {card.description}
                         </p>
                         <Link
                             href={card.link}
-                            className={`flex mx-auto my-5 px-4 py-3 rounded-lg bg-sky text-crust font-medium md:text-lg drop-shadow-lg transition duration-300 hover:bg-surface0 hover:text-text`}
+                            className={classNames(
+                                `flex w-fit mx-auto my-5 px-4 py-3 rounded-lg bg-sky text-crust font-medium md:text-lg drop-shadow-lg transition duration-300 hover:bg-surface0 hover:text-text`,
+                                {
+                                    'md:mx-auto': oddCard,
+                                    'md:mx-0': !oddCard,
+                                }
+                            )}
                         >
                             <p>{card.linkText}</p>
                             <i className='my-auto ml-2 nf nf-cod-arrow_right'></i>
