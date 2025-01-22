@@ -11,6 +11,6 @@ const getHead = (ign: string): HeadData => {
 };
 
 const ameliaHead = getHead('Nyameliaaaa');
-const natalieHead = getHead('Natalesbian');
+const marcyHead = getHead('Meowcelinee');
 
-export { getHead, ameliaHead, natalieHead };
+export { getHead, ameliaHead, marcyHead };

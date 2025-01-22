@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { natalieHead, ameliaHead } from '@/data/playerHeads';
+import { marcyHead, ameliaHead } from '@/data/playerHeads';
 
 export default function AboutCard() {
     return (
@@ -26,9 +26,9 @@ export default function AboutCard() {
                                 className='rounded-md my-4 mx-auto drop-shadow-xl transition duration-500 hover:-translate-y-3'
                                 width={170}
                                 height={170}
-                                src={natalieHead.head}
-                                alt={natalieHead.ign}
-                                title={natalieHead.ign}
+                                src={marcyHead.head}
+                                alt={marcyHead.ign}
+                                title={marcyHead.ign}
                             />
                         </div>
                     </div>
@@ -48,7 +48,7 @@ export default function AboutCard() {
                         </p>
                         <p className='text-lg my-4'>
                             Months later,{' '}
-                            <span className='text-pink'>Natalie </span>{' '}
+                            <span className='text-pink'>Marceline </span>{' '}
                             <span className='md:hidden'>(right)</span> updated
                             the pack to newer Minecraft versions, adding more
                             quotes and allowing people to continue using the

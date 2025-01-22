@@ -8,17 +8,17 @@ interface Author {
     website?: AuthorLink;
 }
 
-const natalie: Author = {
-    name: 'Natalie',
-    discord: 'nyatalieeee',
-    mc: 'Natalesbian',
+const marceline: Author = {
+    name: 'Marceline',
+    discord: 'meowcelinee.',
+    mc: 'Meowcelinee',
     github: {
-        name: 'Nyatalieeee',
-        url: 'https://github.com/Nyatalieeee',
+        name: 'Meowcelinee',
+        url: 'https://github.com/Meowcelinee',
     },
     website: {
-        name: 'nyatalie.pages.dev',
-        url: 'https://nyatalie.pages.dev/',
+        name: 'meowceline.pages.dev',
+        url: 'https://meowceline.pages.dev/',
     },
 };
 
@@ -32,5 +32,5 @@ const amelia: Author = {
     },
 };
 
-export { natalie, amelia };
+export { marceline, amelia };
 export type { AuthorLink, Author };

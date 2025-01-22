@@ -59,7 +59,7 @@ export default function ReadMe() {
 
                 <p className='my-2'>Resource pack for the OOCQC Thread!</p>
                 <p className='my-2'>
-                    Created by Amelia, maintained by her and Natalie - last
+                    Created by Amelia, maintained by her and Marceline - last
                     updated December 14th 2024
                 </p>
 

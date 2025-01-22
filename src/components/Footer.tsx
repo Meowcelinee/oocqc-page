@@ -7,11 +7,11 @@ export default function Footer() {
                 <p className='my-1'>
                     Site by{' '}
                     <Link
-                        href='https://github.com/Nyatalieeee/'
+                        href='https://github.com/Meowcelinee/'
                         target='_blank'
                         className='underline text-overlay2 transition duration-200 hover:text-subtext1'
                     >
-                        Natalie Raine
+                        Marceline Raine
                     </Link>
                 </p>
                 <p className='my-1'>
