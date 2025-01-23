@@ -5,10 +5,7 @@ const nextConfig: NextConfig = {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'mc-heads.net',
-                port: '',
-                pathname: '/avatar/**',
-                search: '',
+                hostname: 'vzge.me',
             },
         ],
     },

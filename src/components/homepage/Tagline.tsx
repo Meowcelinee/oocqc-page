@@ -1,7 +1,7 @@
 export default function Tagline() {
     return (
         <>
-            <section className='animate-appear md:text-6xl text-4xl font-medium text-center md:my-14 my-8 tracking-wide'>
+            <section className='animate-appear md:text-6xl text-4xl font-medium drop-shadow-xl text-center md:my-14 my-8 tracking-wide'>
                 <h1 className='my-2' id='oocqc'>
                     Queercraft, but
                 </h1>
