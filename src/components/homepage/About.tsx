@@ -16,6 +16,7 @@ async function PlayerHead(prop: PlayerHeadSource) {
             src={head.head}
             alt={prop.name}
             title={prop.name}
+            unoptimized
         />
     );
 }

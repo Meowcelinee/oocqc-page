@@ -23,7 +23,7 @@ const getHead = async (ign: string): Promise<HeadData> => {
         };
     } catch (err) {
         console.error(
-            `--== API ERROR when fetching player heads: contact Marceline immediately ==--\n${err}`
+            `Fatal API error when fetching player heads.\n\nContact Marceline IMMEDIATELY with error details:\n- @meowcelinee. on Discord\n- Meowcelinee on GitHub\n- marcelineeee.bsky.social on Bluesky\n\n${err}`
         );
         throw err;
     }
