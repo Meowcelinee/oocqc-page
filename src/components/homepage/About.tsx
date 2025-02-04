@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import * as auth from '@/data/authors';
-import { getHead } from '@/data/playerHeads';
+import getHead from '@/lib/getHead';
 
 const authors = Object.values(auth);
 
