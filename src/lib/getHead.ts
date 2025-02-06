@@ -1,6 +1,6 @@
 import { HeadData, MCApiResponse } from '@/data/playerHeads';
 
-const getHead = async (ign: string): Promise<HeadData> => {
+export default async function getHead(ign: string): Promise<HeadData> {
     try {
         const data = await fetch(`https://api.minetools.eu/uuid/${ign}`);
         const userJson: MCApiResponse = await data.json();
@@ -17,6 +17,4 @@ const getHead = async (ign: string): Promise<HeadData> => {
         );
         throw err;
     }
-};
-
-export default getHead;
+}
