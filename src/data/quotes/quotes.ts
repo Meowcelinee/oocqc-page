@@ -12,3 +12,4 @@ const validQuotes = rawQuotes.map((quote: string): Quote => {
 });
 
 export default validQuotes;
+export type { Quote };
