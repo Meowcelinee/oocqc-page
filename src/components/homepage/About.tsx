@@ -1,19 +1,23 @@
 import Image from 'next/image';
-import * as auth from '@/data/authors';
-import getHead from '@/lib/getHead';
+import { amelia, marceline } from '@/data/authors';
+import getPlayerSkin from '@/lib/getPlayerSkin';
+import classNames from 'classnames';
 
-const authors = Object.values(auth);
+type PlayerHeadSource = { name: string; flipped?: boolean };
 
-type PlayerHeadSource = { name: string };
-
-async function PlayerHead(prop: PlayerHeadSource) {
-    const head = await getHead(prop.name);
+async function PlayerModel(prop: PlayerHeadSource) {
+    const skinData = await getPlayerSkin(prop.name);
     return (
         <Image
-            className='rounded-md my-4 mx-auto drop-shadow-xl transition duration-500 hover:-translate-y-3'
+            className={classNames(
+                'rounded-md my-4 mx-auto drop-shadow-xl transition duration-500 hover:-translate-y-3',
+                {
+                    '-scale-x-100 md:scale-x-100': prop.flipped,
+                }
+            )}
             width={170}
             height={170}
-            src={head.head}
+            src={skinData.bust}
             alt={prop.name}
             title={prop.name}
             unoptimized
@@ -30,9 +34,8 @@ export default function AboutCard() {
                         About OOCQC
                     </h2>
                     <div className='md:block flex'>
-                        {authors.map((author, authorKey) => (
-                            <PlayerHead name={author.mc} key={authorKey} />
-                        ))}
+                        <PlayerModel name={amelia.mc} />
+                        <PlayerModel name={marceline.mc} flipped />
                     </div>
                 </div>
                 <div className='text-center justify-center my-auto md:mx-0 mx-auto py-4 md:px-0 px-2 text-medium tracking-wide md:w-1/3 w-5/6 rounded-lg transition duration-500 hover:bg-crust'>

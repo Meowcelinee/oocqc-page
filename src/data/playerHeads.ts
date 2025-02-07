@@ -1,4 +1,5 @@
-interface HeadData {
+interface SkinData {
+    bust: string;
     head: string;
     ign: string;
 }
@@ -10,4 +11,4 @@ interface MCApiResponse {
     status: string;
 }
 
-export type { HeadData, MCApiResponse };
+export type { SkinData, MCApiResponse };
