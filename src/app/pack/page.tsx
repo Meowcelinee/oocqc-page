@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import ReadMe from './ReadMe';
-import Releases from './Releases';
+import ReadMe from '@/components/pack/ReadMe';
+import Releases from '@/components/pack/Releases';
 
 export default function DownloadPage() {
     return (
