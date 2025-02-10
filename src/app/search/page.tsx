@@ -57,7 +57,9 @@ export default async function SearchPage(props: SearchPageProps) {
                         fallback={<p>hi this is the fallback</p>}
                     >
                         <h2 className='md:text-4xl text-2xl text-sky font-bold'>
-                            Found {filteredQuotes.length} results:
+                            Found {filteredQuotes.length} result
+                            {filteredQuotes.length !== 1 && 's'}
+                            {filteredQuotes.length !== 0 ? ':' : '.'}
                         </h2>
 
                         {filteredQuotes?.map((q, key) => {
