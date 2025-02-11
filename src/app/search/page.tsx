@@ -41,7 +41,6 @@ export default async function SearchPage(props: SearchPageProps) {
                     <div className='my-8 text-xl font-medium list-disc list-inside'>
                         <p>TODO:</p>
                         <ul>
-                            <li>make the quote results prettier</li>
                             <li>
                                 fix quotes displaying when theres no queries
                             </li>
