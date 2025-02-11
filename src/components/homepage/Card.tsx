@@ -10,10 +10,11 @@ export default function HomepageCards() {
         return (
             <div
                 className={classNames(
-                    'flex flex-col justify-center md:gap-2 gap-16 mx-auto mb-4 md:rounded-lg bg-gradient-to-br',
+                    'flex flex-col justify-center md:gap-2 gap-16 mx-auto mb-4 ',
                     {
-                        'from-crust via-mantle to-crust': !oddCard,
-                        'base ': oddCard,
+                        'bg-gradient-to-br from-crust via-mantle to-crust':
+                            !oddCard,
+                        'bg-base ': oddCard,
                     }
                 )}
             >
