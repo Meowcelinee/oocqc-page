@@ -11,14 +11,14 @@ const navbarLinks: NavbarLink[] = [
         iconClassName: 'nf-fa-magnifying_glass',
     },
     {
-        title: 'List',
-        link: '/list',
-        iconClassName: 'nf-md-format_list_bulleted',
+        title: 'Random',
+        link: '/random',
+        iconClassName: 'nf-fa-dice_d20',
     },
     {
         title: 'Pack',
         link: '/pack',
-        iconClassName: 'nf-md-folder_multiple_outline',
+        iconClassName: 'nf-md-folder_download',
     },
 ];
 
