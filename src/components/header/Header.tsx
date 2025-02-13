@@ -13,7 +13,7 @@ export default function Header() {
                     height={43}
                     src='/images/logos/icon.png'
                     alt=''
-                    className='mr-4 transition duration-200 hover:brightness-75 hover:opacity-90'
+                    className='mr-4 transition duration-200 hover:brightness-75 hover:opacity-90 w-auto h-auto'
                 />
             </Link>
             <div className='flex my-auto'>
