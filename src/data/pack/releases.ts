@@ -9,9 +9,9 @@ interface Release {
 const releases: Release[] = [
     {
         downloadUrl:
-            'https://github.com/Nyatalieeee/OOCQC/releases/download/v1.4.0/OOCQC-v1.4.0-1.21.zip',
+            'https://github.com/Meowcelinee/OOCQC/releases/download/v1.4.0/OOCQC-v1.4.0-1.21.zip',
         mcVersion: '1.21.1',
-        sourceUrl: 'https://github.com/Nyatalieeee/OOCQC/releases/v1.4.0/',
+        sourceUrl: 'https://github.com/Meowcelinee/OOCQC/releases/v1.4.0/',
         version: '1.4.0',
         notes: [
             '🎉 1.21.1 now supported!',
@@ -22,17 +22,17 @@ const releases: Release[] = [
     },
     {
         downloadUrl:
-            'https://github.com/Nyatalieeee/OOCQC/releases/download/v1.3.3/OOCQC-v1.3.3-1.20.4.zip',
+            'https://github.com/Meowcelinee/OOCQC/releases/download/v1.3.3/OOCQC-v1.3.3-1.20.4.zip',
         mcVersion: '1.20.4',
-        sourceUrl: 'https://github.com/Nyatalieeee/OOCQC/releases/v1.3.3/',
+        sourceUrl: 'https://github.com/Meowcelinee/OOCQC/releases/v1.3.3/',
         version: '1.3.3',
         notes: ['Added quotes posted throughout the month of May'],
     },
     {
         downloadUrl:
-            'https://github.com/Nyatalieeee/OOCQC/releases/download/v1.3.2/OOCQC-v1.3.2-1.20.4.zip',
+            'https://github.com/Meowcelinee/OOCQC/releases/download/v1.3.2/OOCQC-v1.3.2-1.20.4.zip',
         mcVersion: '1.20.4',
-        sourceUrl: 'https://github.com/Nyatalieeee/OOCQC/releases/v1.3.2/',
+        sourceUrl: 'https://github.com/Meowcelinee/OOCQC/releases/v1.3.2/',
         version: '1.3.2',
         notes: [
             'Added a missed quote about planet vore',

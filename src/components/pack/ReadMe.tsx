@@ -28,7 +28,7 @@ export default function ReadMe() {
                 <p>|</p>
                 <Link
                     className='text-subtext0 md:text-lg font-medium italic underline pb-1 transition duration-300 hover:text-text'
-                    href='https://github.com/Nyatalieeee/OOCQC'
+                    href='https://github.com/Meowcelinee/OOCQC'
                     target='_blank'
                 >
                     View source
