@@ -10,12 +10,18 @@ interface SearchPageProps {
 function EnterSearchTerm() {
     return (
         <div className='mt-2'>
-            <h2 className='md:text-3xl text-2xl text-subtext0 font-semibold'>
-                Enter a search term to find quotes!
+            <h2 className='md:text-2xl text-xl text-overlay1 font-semibold'>
+                Enter a search term
             </h2>
         </div>
     );
 }
+
+/*
+ *  TODO:
+ *   - display a list of the people being quoted, with the number of times theyre quoted
+ *   - (do this when you have a better understanding of array methods)
+ */
 
 export default async function SearchPage(props: SearchPageProps) {
     const searchParams = await props.searchParams;
@@ -50,12 +56,6 @@ export default async function SearchPage(props: SearchPageProps) {
                 </div>
             </div>
             <div className='md:px-12 px-4 w-full'>
-                {/* 
-                    TODO:
-                    - make EnterSearchTerm a little prettier
-                    - maybe display a list of the number of quotes per person?
-                */}
-
                 {!quoteFilter && !nameFilter ? (
                     <EnterSearchTerm />
                 ) : (

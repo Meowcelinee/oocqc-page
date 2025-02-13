@@ -1,4 +1,4 @@
-export default function Quotelist() {
+export default function RandomQuote() {
     return (
         <div className='flex-col md:py-4 py-2'>
             <h1 className='md:my-6 my-4 md:text-4xl text-3xl text-center font-semibold drop-shadow-lg'>
@@ -6,7 +6,7 @@ export default function Quotelist() {
             </h1>
             <div className='flex justify-center gap-3 bg-mantle px-4 py-2 w-full'>
                 <div className='px-2 py-2 md:w-3/4 w-full'>
-                    <p>hi</p>
+                    <p>hi this isnt done yet</p>
                 </div>
             </div>
             <div className='md:px-12 px-4 w-full'></div>
