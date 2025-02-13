@@ -1,38 +1,74 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
     return (
-        <>
-            <footer className='py-4 px-2 text-subtext0 text-sm font-light'>
-                <p className='my-1'>
-                    Site by{' '}
-                    <Link
-                        href='https://github.com/Meowcelinee/'
-                        target='_blank'
-                        className='underline text-overlay2 transition duration-200 hover:text-subtext1'
-                    >
-                        Marceline Raine
-                    </Link>
-                </p>
-                <p className='my-1'>
-                    Made with{' '}
-                    <span className='text-maroon font-normal'>{'<3'}</span>
-                </p>
-                <div className='mx-auto my-2'>
-                    <hr className='border-surface1 mx-2' />
+        <footer className='py-4 md:px-4 px-2 text-subtext0 text-xs font-light'>
+            <div className='flex md:flex-row flex-col justify-between gap-1 md:text-left text-center align-middle'>
+                <div className='flex flex-col gap-1 my-auto'>
+                    <p className='my-1'>
+                        Copyright &copy; 2023-{new Date().getFullYear()}, Out Of
+                        Context Queercraft
+                    </p>
+                    <p className='my-1'>
+                        Website by{' '}
+                        <Link
+                            href='https://github.com/Meowcelinee/'
+                            target='_blank'
+                            className='text-mauve underline transition duration-200 hover:text-subtext1'
+                        >
+                            Marceline Raine
+                        </Link>{' '}
+                        | Thread by{' '}
+                        <Link
+                            href='https://github.com/Nyameliaaaa/'
+                            target='_blank'
+                            className='text-pink underline transition duration-200 hover:text-subtext1'
+                        >
+                            Amelia Rose
+                        </Link>
+                    </p>
                 </div>
-                <p className='text-subtext0 text-xs my-1'>
-                    This site is not affiliated with, or endorsed by{' '}
+
+                <div className='md:block flex justify-center text-xs'>
+                    <p className='m-auto md:my-1 text-sm md:text-center'>
+                        Made with{' '}
+                        <span className='text-maroon font-normal opacity-85'>
+                            {'<3'}
+                        </span>{' '}
+                    </p>
                     <Link
-                        href='https://queercraft.net/'
+                        href='https://github.com/Meowcelinee/oocqc-page'
                         target='_blank'
-                        className='underline text-overlay2 transition duration-200 hover:text-subtext1'
+                        className='flex bg-surface0 px-2 py-1 md:m-0 my-2 mx-auto rounded-2xl w-fit transition duration-300 hover:bg-surface1'
                     >
-                        Queercraft
-                    </Link>{' '}
-                    or Prism.
-                </p>
-            </footer>
-        </>
+                        <Image
+                            width={24}
+                            height={24}
+                            src='/images/github.svg'
+                            alt=''
+                            className='mx-1'
+                        />
+                        <span className='mx-1 my-auto text-text font-medium'>
+                            View source
+                        </span>
+                    </Link>
+                </div>
+            </div>
+            <div className='mx-auto my-2'>
+                <hr className='border-surface1 mx-1' />
+            </div>
+            <p className='text-overlay2 text-xs md:text-left text-center my-2'>
+                This site is not affiliated with, or officially endorsed by{' '}
+                <Link
+                    href='https://queercraft.net/'
+                    target='_blank'
+                    className='underline text-overlay2 transition duration-200 hover:text-subtext0'
+                >
+                    Queercraft
+                </Link>{' '}
+                or Prism.
+            </p>
+        </footer>
     );
 }
