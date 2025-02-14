@@ -34,6 +34,7 @@ export default function QuoteForm() {
                         placeholder='Keywords'
                         onChange={e => handleSearch('quote', e.target.value)}
                         defaultValue={searchParams.get('quote')?.toString()}
+                        autoComplete='off'
                     />
                 </div>
                 <div className='block mx-auto md:w-1/2 w-11/12'>
@@ -46,6 +47,7 @@ export default function QuoteForm() {
                         placeholder='Name'
                         onChange={e => handleSearch('name', e.target.value)}
                         defaultValue={searchParams.get('name')?.toString()}
+                        autoComplete='off'
                     />
                 </div>
             </div>
