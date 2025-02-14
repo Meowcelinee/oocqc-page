@@ -13,17 +13,17 @@ export default function Footer() {
                     <p className='my-1'>
                         Website by{' '}
                         <Link
-                            href='https://github.com/Meowcelinee/'
+                            href='https://bsky.app/profile/marcelineeee.bsky.social'
                             target='_blank'
-                            className='text-mauve underline transition duration-200 hover:text-subtext1'
+                            className='text-subtext1 underline transition duration-200 hover:text-mauve'
                         >
                             Marceline Raine
                         </Link>{' '}
                         | Thread by{' '}
                         <Link
-                            href='https://github.com/Nyameliaaaa/'
+                            href='https://bsky.app/profile/nyamelia.is-immensely.gay'
                             target='_blank'
-                            className='text-pink underline transition duration-200 hover:text-subtext1'
+                            className='text-subtext1 underline transition duration-200 hover:text-pink'
                         >
                             Amelia Rose
                         </Link>
@@ -49,7 +49,7 @@ export default function Footer() {
                             alt=''
                             className='mx-1'
                         />
-                        <span className='mx-1 my-auto text-text font-medium'>
+                        <span className='mx-1 my-auto text-subtext1 font-medium'>
                             View source
                         </span>
                     </Link>

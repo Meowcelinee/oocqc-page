@@ -2,6 +2,7 @@ import validQuotes from '@/data/quotes/quotes';
 import QuoteForm from '@/components/search/QuoteForm';
 import QuoteResult from '@/components/search/QuoteResult';
 import { Quote } from '@/data/quotes/quotes';
+import ScrollToTop from '@/components/search/ScrollToTop';
 
 interface SearchPageProps {
     searchParams?: Promise<{ quote: string; name: string }>;
@@ -11,7 +12,7 @@ function EnterSearchTerm() {
     return (
         <div className='mt-2'>
             <h2 className='md:text-2xl text-xl text-overlay1 font-semibold'>
-                Enter a search term
+                Search results will appear here
             </h2>
         </div>
     );
@@ -71,6 +72,9 @@ export default async function SearchPage(props: SearchPageProps) {
                         })}
                     </>
                 )}
+            </div>
+            <div className='flex justify-center'>
+                <ScrollToTop length={filteredQuotes?.length} />
             </div>
         </div>
     );
