@@ -67,8 +67,8 @@ export default async function SearchPage(props: SearchPageProps) {
                             {filteredQuotes?.length !== 0 ? ':' : '.'}
                         </h2>
 
-                        {filteredQuotes?.map((q, key) => {
-                            return <QuoteResult key={key} {...q} />;
+                        {filteredQuotes?.map(q => {
+                            return <QuoteResult key={q.id} {...q} />;
                         })}
                     </>
                 )}
