@@ -10,7 +10,7 @@ async function PlayerModel(prop: PlayerHeadSource) {
     return (
         <Image
             className={classNames(
-                'rounded-md my-4 mx-auto drop-shadow-xl transition duration-500 hover:-translate-y-3',
+                'rounded-md my-4 mx-auto drop-shadow-xl transition duration-500 md:hover:-translate-y-3',
                 {
                     '-scale-x-100 md:scale-x-100': prop.flipped,
                 }
@@ -38,13 +38,13 @@ export default function AboutCard() {
                         <PlayerModel name={marceline.mc} flipped />
                     </div>
                 </div>
-                <div className='text-center justify-center my-auto md:mx-0 mx-auto py-4 md:px-0 px-2 text-medium tracking-wide md:w-1/3 w-5/6 rounded-lg transition duration-500 hover:bg-crust'>
+                <div className='text-center justify-center my-auto md:mx-0 mx-auto py-4 md:px-0 px-2 text-medium tracking-wide md:w-1/3 w-5/6 rounded-lg transition duration-500 md:hover:bg-crust'>
                     <h2
                         className='md:text-3xl text-2xl font-semibold my-4'
                         id='oocqc'
                     >
                         Founded in 2023 by{' '}
-                        <span className='text-pink'>Amelia</span>,
+                        <span className='text-pink'>Amelia,</span>
                     </h2>
                     <p className='text-lg'>
                         the OOCQC thread became instantly popular from people

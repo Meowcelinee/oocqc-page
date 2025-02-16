@@ -10,8 +10,8 @@ interface HomepageCard {
 
 const homepageCards: HomepageCard[] = [
     {
-        alt: '',
-        description: 'A new quote. Every time the game is launched.',
+        alt: 'The pack.png for the OOCQC resource pack',
+        description: 'A new quote, every time you launch the game.',
         image: {
             src: '/images/packpreview.png',
             height: 300,

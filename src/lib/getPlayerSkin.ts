@@ -7,8 +7,7 @@ export default async function getPlayerSkin(ign: string): Promise<SkinData> {
         const data = await fetch(`https://api.minetools.eu/uuid/${ign}`);
         const userJson: MCApiResponse = await data.json();
 
-        if (userJson.id === undefined)
-            throw new Error(`${errMsg}\n\nError: Unknown player.`);
+        if (userJson.id === undefined) throw new Error(`Unknown player.`);
 
         return {
             bust: `https://vzge.me/bust/256/${userJson.id}?no=ears,cape`,
