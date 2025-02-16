@@ -2,24 +2,29 @@
 
 import Form from 'next/form';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { useDebouncedCallback } from 'use-debounce';
 
 export default function QuoteForm() {
     const { replace } = useRouter();
     const pathname = usePathname();
     const searchParams = useSearchParams();
 
-    // commented so my own dumb ass doesnt forget how this works
+    /* 
+    update url with search parameters --- used for quote *and* name queries.
+    useDebounced creates delay between keystroke and search
+    */
+    const handleSearch = useDebouncedCallback(
+        (query: string, value: string) => {
+            const params = new URLSearchParams(searchParams);
 
-    // update url with search parameters --- used for quote *and* name queries
-    const handleSearch = (query: string, value: string): void => {
-        const params = new URLSearchParams(searchParams);
+            // if value doesnt exist, remove the *whole query* from the url
+            value ? params.set(query, value) : params.delete(query);
 
-        // if value doesnt exist, remove the *whole query* from the url
-        value ? params.set(query, value) : params.delete(query);
-
-        // update url
-        replace(`${pathname}?${params.toString()}`);
-    };
+            // update url
+            replace(`${pathname}?${params.toString()}`);
+        },
+        500 // 500ms delay
+    );
 
     return (
         <Form action='/search' className='flex flex-col justify-center w-full'>
