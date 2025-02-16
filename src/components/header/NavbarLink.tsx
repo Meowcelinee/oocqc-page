@@ -14,7 +14,7 @@ export default function NavbarLinks() {
                 key={link.link}
                 href={link.link}
                 className={classNames(
-                    'flex mx-4 md:text-sm text-xs transition duration-200 border-b-2',
+                    'flex mx-2 md:mx-4 md:text-sm text-xs transition duration-200 border-b-2',
                     {
                         'text-subtext0 border-b-transparent hover:text-text hover:border-b-pink':
                             !pathname.includes(link.link),
