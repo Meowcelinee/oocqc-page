@@ -12,10 +12,10 @@ export default async function ViewQuote({
         <div className='md:py-4 py-2'>
             <div className='bg-gradient-to-r from-mantle to-crust drop-shadow-md rounded-sm mx-auto md:px-10 md:py-6 px-5 py-3 w-full'>
                 <div className='mx-auto md:w-fit md:max-w-screen-xl w-full'>
-                    <h1 className='animate-appear my-4 md:text-4xl text-3xl text-rosewater font-semibold drop-shadow-lg tracking-normal md:tracking-wide md:leading-normal leading-normal'>
+                    <h1 className='animate-appearShorter my-4 md:text-4xl text-3xl text-rosewater font-semibold drop-shadow-lg tracking-normal md:tracking-wide md:leading-normal leading-normal'>
                         "{quote.quote}"
                     </h1>
-                    <p className='animate-appearLonger text-overlay2 italic'>
+                    <p className='animate-appear text-overlay2 italic'>
                         --{quote.person}
                     </p>
                 </div>
@@ -23,7 +23,7 @@ export default async function ViewQuote({
             <div className='w-fit mt-4 mx-auto'>
                 <Link
                     href='/search'
-                    className='flex bg-sky text-crust rounded-2xl drop-shadow-lg px-4 py-1 transition duration-300 w-fit md:hover:bg-mantle md:hover:text-text'
+                    className='flex bg-sky text-crust rounded-2xl drop-shadow-md px-4 py-1 transition duration-300 w-fit md:hover:bg-mantle md:hover:text-text'
                 >
                     <div className='flex gap-2 m-auto text-center'>
                         <i className='nf nf-fa-arrow_left text-sm my-auto'></i>

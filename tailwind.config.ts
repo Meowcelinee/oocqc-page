@@ -16,6 +16,7 @@ export default {
             },
             animation: {
                 appear: 'appear 1.2s ease-in-out',
+                appearShorter: 'appear 0.7s ease-in-out',
                 appearLonger: 'appear 1.6s ease-in-out',
                 appearEvenLonger: 'appear 2.2s ease-in-out',
             },
