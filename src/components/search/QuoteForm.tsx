@@ -5,7 +5,7 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useDebouncedCallback } from 'use-debounce';
 
 export default function QuoteForm() {
-    const { replace } = useRouter();
+    const router = useRouter();
     const pathname = usePathname();
     const searchParams = useSearchParams();
 
@@ -21,10 +21,18 @@ export default function QuoteForm() {
             value ? params.set(query, value) : params.delete(query);
 
             // update url
-            replace(`${pathname}?${params.toString()}`);
+            router.replace(`${pathname}?${params.toString()}`);
         },
         500 // 500ms delay
     );
+
+    const handleSort = (val: string) => {
+        const param = new URLSearchParams(searchParams);
+
+        val === 'newest' ? param.set('sort', 'newest') : param.delete('sort');
+
+        router.replace(`${pathname}?${param.toString()}`);
+    };
 
     return (
         <Form action='/search' className='flex flex-col justify-center w-full'>
@@ -36,7 +44,7 @@ export default function QuoteForm() {
                     <input
                         name='quote'
                         className='bg-surface0 rounded-md border-surface1 border-2 drop-shadow-lg text-lg py-2 px-2 mx-auto w-full transition duration-300 focus:outline-none focus:border-sky focus:bg-base'
-                        placeholder='Keywords'
+                        placeholder='Quote / Keywords'
                         onChange={e => handleSearch('quote', e.target.value)}
                         defaultValue={searchParams.get('quote')?.toString()}
                         autoComplete='off'
@@ -55,6 +63,28 @@ export default function QuoteForm() {
                         autoComplete='off'
                     />
                 </div>
+            </div>
+            <div className='flex md:justify-center gap-3 mt-3 md:text-lg text-subtext1'>
+                <label className='flex my-auto'>
+                    <input
+                        type='radio'
+                        name='sort'
+                        value='oldest'
+                        className='mr-2'
+                        onChange={e => handleSort(e.target.value)}
+                    />
+                    Sort by oldest
+                </label>
+                <label className='flex my-auto'>
+                    <input
+                        type='radio'
+                        name='sort'
+                        value='newest'
+                        className='mr-2'
+                        onChange={e => handleSort(e.target.value)}
+                    />
+                    Sort by newest
+                </label>
             </div>
         </Form>
     );

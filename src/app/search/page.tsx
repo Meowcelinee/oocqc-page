@@ -5,7 +5,7 @@ import { Quote } from '@/data/quotes/quotes';
 import ScrollToTop from '@/components/search/ScrollToTop';
 
 interface SearchPageProps {
-    searchParams?: Promise<{ quote: string; name: string }>;
+    searchParams?: Promise<{ quote: string; name: string; sort?: string }>;
 }
 
 function EnterSearchTerm() {
@@ -18,16 +18,11 @@ function EnterSearchTerm() {
     );
 }
 
-/*
- *  TODO:
- *   - display a list of the people being quoted, with the number of times theyre quoted
- *   - (do this when you have a better understanding of array methods)
- */
-
 export default async function SearchPage(props: SearchPageProps) {
     const searchParams = await props.searchParams;
     const quoteFilter = searchParams?.quote;
     const nameFilter = searchParams?.name;
+    const sortMethod = searchParams?.sort;
 
     const handleFilter = (quotes: Quote[]): Quote[] | void => {
         if (!quoteFilter && !nameFilter) return;
@@ -44,7 +39,18 @@ export default async function SearchPage(props: SearchPageProps) {
             );
     };
 
+    const handleSort = (quotes: Quote[] | void): Quote[] | void => {
+        if (!sortMethod) return quotes;
+
+        if (sortMethod === 'newest')
+            return quotes?.sort((a, b) => {
+                return a.id > b.id ? -1 : a.id < b.id ? 1 : 0;
+            });
+        return quotes;
+    };
+
     const filteredQuotes = handleFilter(validQuotes);
+    const sortedQuotes = handleSort(filteredQuotes);
 
     return (
         <div className='flex-col md:py-4 py-2'>
@@ -61,15 +67,19 @@ export default async function SearchPage(props: SearchPageProps) {
                     <EnterSearchTerm />
                 ) : (
                     <>
-                        <h2 className='md:text-4xl text-2xl text-sky font-bold mt-2'>
+                        <h2 className='md:text-4xl text-2xl text-sky font-bold mt-2 tracking-wide'>
                             Found {filteredQuotes?.length} result
                             {filteredQuotes?.length !== 1 && 's'}
                             {filteredQuotes?.length !== 0 ? ':' : '.'}
                         </h2>
+                        <p className='text-lg text-overlay1 tracking-wide'>
+                            Sorting by {sortMethod ?? 'oldest'}
+                        </p>
 
-                        {filteredQuotes?.map(q => {
-                            return <QuoteResult key={q.id} {...q} />;
-                        })}
+                        {sortedQuotes &&
+                            sortedQuotes.map(q => {
+                                return <QuoteResult key={q.id} {...q} />;
+                            })}
                     </>
                 )}
             </div>
