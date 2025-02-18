@@ -10,7 +10,7 @@ interface SearchPageProps {
 
 function EnterSearchTerm() {
     return (
-        <div className='mt-2 md:mb-24 mb-16'>
+        <div className='md:my-12 my-9'>
             <h2 className='md:text-2xl text-xl text-overlay1 font-semibold'>
                 Search results will appear here
             </h2>
@@ -62,7 +62,7 @@ export default async function SearchPage(props: SearchPageProps) {
                     <QuoteForm />
                 </div>
             </div>
-            <div className='md:px-12 px-4 w-full'>
+            <div className='md:px-12 px-4 mx-auto md:max-w-screen-xl w-full'>
                 {!quoteFilter && !nameFilter ? (
                     <EnterSearchTerm />
                 ) : (

@@ -23,7 +23,7 @@ export default function QuoteForm() {
             // update url
             router.replace(`${pathname}?${params.toString()}`);
         },
-        500 // 500ms delay
+        200 // 200ms delay
     );
 
     const handleSort = (val: string) => {
@@ -35,7 +35,10 @@ export default function QuoteForm() {
     };
 
     return (
-        <Form action='/search' className='flex flex-col justify-center w-full'>
+        <Form
+            action='/search'
+            className='flex flex-col justify-center mx-auto md:max-w-screen-xl w-full'
+        >
             <div className='flex md:flex-row flex-col gap-5'>
                 <div className='block mx-auto md:w-1/2 w-11/12'>
                     <h3 className='md:text-xl text-lg text-overlay0 font-medium'>

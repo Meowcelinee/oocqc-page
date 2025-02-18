@@ -38,7 +38,7 @@ export default function AboutCard() {
                         <PlayerModel name={marceline.mc} flipped />
                     </div>
                 </div>
-                <div className='text-center justify-center my-auto md:mx-0 mx-auto py-4 md:px-0 px-2 text-medium tracking-wide md:w-1/3 w-5/6 rounded-lg transition duration-500 md:hover:bg-crust'>
+                <div className='text-center justify-center my-auto md:mx-0 mx-auto py-4 md:px-0 px-2 text-medium tracking-wide md:w-1/3 w-5/6 rounded-lg transition duration-500'>
                     <h2
                         className='md:text-3xl text-2xl font-semibold my-4'
                         id='oocqc'
