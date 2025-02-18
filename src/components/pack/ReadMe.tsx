@@ -7,7 +7,7 @@ function Reviews() {
         return (
             <>
                 <div
-                    className='bg-crust text-lg mt-4 mb-2 px-3 py-3 border-l-8 border-l-base transition duration-200 hover:border-l-surface1'
+                    className='bg-crust text-lg mt-4 mb-2 px-3 py-3 border-l-8 border-l-base transition duration-300 md:hover:border-l-surface0 md:hover:bg-mantle md:hover:brightness-105'
                     key={reviewKey}
                 >
                     <p id='oocqc'>"{review.text}"</p>
@@ -38,15 +38,15 @@ export default function ReadMe() {
                 Out of Context QC (OOCQC)
             </h1>
             <div className='text-lg'>
-                <Link target='_blank' href='/images/gh-preview.png'>
+                <div>
                     <Image
                         width={400}
-                        height={400}
+                        height={56293874628464769876987349587}
                         alt=''
                         src='/images/gh-preview.png'
-                        className='my-2 rounded-md'
+                        className='my-2 rounded-md w-fit h-auto'
                     />
-                </Link>
+                </div>
 
                 <p className='my-2'>Resource pack for the OOCQC Thread!</p>
                 <p className='my-2'>

@@ -64,7 +64,7 @@ export default function QuoteForm() {
                     />
                 </div>
             </div>
-            <div className='flex md:justify-center gap-3 mt-3 md:text-lg text-subtext1'>
+            <div className='flex justify-center gap-3 mt-3 md:text-lg text-subtext1'>
                 <label className='flex my-auto'>
                     <input
                         type='radio'

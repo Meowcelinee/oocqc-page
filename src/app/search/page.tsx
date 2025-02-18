@@ -10,7 +10,7 @@ interface SearchPageProps {
 
 function EnterSearchTerm() {
     return (
-        <div className='mt-2'>
+        <div className='mt-2 md:mb-24 mb-16'>
             <h2 className='md:text-2xl text-xl text-overlay1 font-semibold'>
                 Search results will appear here
             </h2>
