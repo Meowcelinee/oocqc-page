@@ -1,18 +1,19 @@
 import Link from 'next/link';
 import ReadMe from '@/components/pack/ReadMe';
 import Releases from '@/components/pack/Releases';
+import releases from '@/data/pack/releases';
 
 export default function DownloadPage() {
     return (
         <>
             <div className='flex-col md:py-4 py-2'>
                 <div className='mx-4 my-4 md:px-8'>
-                    <h1 className='md:my-8 my-5 md:text-5xl text-4xl text-center font-semibold drop-shadow-lg'>
+                    <h1 className='animate-appearShorter md:my-6 my-4 md:text-4xl text-3xl text-center font-semibold drop-shadow-lg'>
                         The OOCQC Resource Pack
                     </h1>
                     <div className='flex'>
                         <Link
-                            className='bg-surface0 rounded-md px-3 py-2 md:my-5 my-3 mx-auto text-subtext0 transition duration-200 hover:bg-surface1 hover:text-subtext1'
+                            className='animate-appear bg-surface0 rounded-md px-3 py-2 my-4 mx-auto text-subtext0 transition duration-200 hover:bg-surface1 hover:text-subtext1'
                             href='#releases'
                         >
                             Scroll to downloads
@@ -30,7 +31,9 @@ export default function DownloadPage() {
                             Releases
                         </h2>
                         <div className='px-4 py-3'>
-                            <Releases />
+                            {releases.map((release, key) => {
+                                return <Releases {...release} key={key} />;
+                            })}
                         </div>
                     </div>
                 </div>
