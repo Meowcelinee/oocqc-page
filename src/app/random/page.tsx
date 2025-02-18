@@ -1,6 +1,6 @@
 'use client';
 
-import RandomResult from '@/components/random/result';
+import RandomResult from '@/components/random/RandomResult';
 import { Quote } from '@/data/quotes/quotes';
 import randomQuote from '@/lib/randomQuote';
 import { useState } from 'react';
