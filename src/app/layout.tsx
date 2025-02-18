@@ -16,9 +16,9 @@ export const metadata: Metadata = {
         siteName: 'OOCQC',
         images: [
             {
-                url: 'http://localhost:3000/favicon.ico',
-                height: 300,
-                width: 300,
+                url: 'https://i.imgur.com/TFOPID9.png',
+                height: 200,
+                width: 200,
             },
         ],
         locale: 'en_US',
