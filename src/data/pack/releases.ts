@@ -42,3 +42,4 @@ const releases: Release[] = [
 ];
 
 export default releases;
+export type { Release };
