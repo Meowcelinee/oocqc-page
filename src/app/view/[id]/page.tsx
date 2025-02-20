@@ -13,7 +13,7 @@ export default async function ViewQuote({
             <div className='bg-gradient-to-r from-mantle to-crust drop-shadow-md rounded-sm mx-auto md:px-10 md:py-6 px-5 py-3 w-full'>
                 <div className='mx-auto md:w-fit md:max-w-screen-xl w-full'>
                     <h1 className='animate-appearShorter my-4 md:text-4xl text-3xl text-rosewater font-semibold drop-shadow-lg tracking-normal md:tracking-wide md:leading-normal leading-normal'>
-                        "{quote.quote}"
+                        &quot;{quote.quote}&quot;
                     </h1>
                     <p className='animate-appear text-overlay2 italic'>
                         --{quote.person}

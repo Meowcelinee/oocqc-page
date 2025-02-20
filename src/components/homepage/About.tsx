@@ -58,7 +58,7 @@ export default function AboutCard() {
                         <span className='md:hidden'>(right)</span> updated the
                         pack to newer Minecraft versions, adding more quotes and
                         allowing people to continue using the resource pack. She
-                        also created this very website you're on.
+                        also created this very website you&apos;re on.
                     </p>
                 </div>
             </div>
