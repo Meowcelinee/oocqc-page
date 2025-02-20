@@ -7,13 +7,8 @@ export default function randomQuote(): Quote {
     if (sessionStorage.length >= 400) sessionStorage.clear();
 
     // if this quote is in sessionstorage, generate another
-    if (sessionStorage.getItem(validQuotes[rand].quote)) {
-        if (rand === validQuotes.length) {
-            rand -= 1;
-        } else {
-            rand += 1;
-        }
-    }
+    if (sessionStorage.getItem(validQuotes[rand].quote))
+        rand === validQuotes.length ? (rand = rand - 1) : (rand = rand + 1);
 
     const randQuote = validQuotes[rand];
     sessionStorage.setItem(randQuote.quote, randQuote.quote);
