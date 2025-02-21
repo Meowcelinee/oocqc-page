@@ -5,7 +5,7 @@ interface SkinData {
 }
 
 interface MCApiResponse {
-    cache: {};
+    cache: object;
     id: string;
     name: string;
     status: string;

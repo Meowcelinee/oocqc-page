@@ -1,0 +1,6 @@
+name = "oocqc"
+compatibility_date = "2025-02-20"
+compatibility_flags = [ "nodejs_compat" ]
+
+[vars]
+NODE_VERSION 18.18.0

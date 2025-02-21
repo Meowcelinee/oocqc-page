@@ -13,7 +13,7 @@ export default function NotFound() {
                         <hr className='md:my-8 my-12 border-surface2' />
 
                         <div className='my-3 mx-auto font-semibold text-xl text-center'>
-                            That page doesn't exist.
+                            That page doesn&apos;t exist.
                         </div>
                         <Link
                             href='/'
