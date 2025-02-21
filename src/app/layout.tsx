@@ -16,7 +16,7 @@ export const metadata: Metadata = {
         siteName: 'OOCQC',
         images: [
             {
-                url: 'https://i.imgur.com/TFOPID9.png',
+                url: 'https://oocqc.pages.dev/images/icon.png',
                 height: 200,
                 width: 200,
             },
