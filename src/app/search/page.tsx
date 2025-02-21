@@ -3,6 +3,7 @@ import QuoteForm from '@/components/search/QuoteForm';
 import QuoteResult from '@/components/search/QuoteResult';
 import { Quote } from '@/data/quotes/quotes';
 import ScrollToTop from '@/components/search/ScrollToTop';
+import classNames from 'classnames';
 
 interface SearchPageProps {
     searchParams?: Promise<{ quote: string; name: string; sort?: string }>;
@@ -50,7 +51,7 @@ export default async function SearchPage(props: SearchPageProps) {
     };
 
     const filteredQuotes = handleFilter(validQuotes);
-    const sortedQuotes = handleSort(filteredQuotes);
+    const sortedQuotes = handleSort(filteredQuotes) ?? [];
 
     return (
         <div className='flex-col md:py-4 py-2'>
@@ -63,14 +64,14 @@ export default async function SearchPage(props: SearchPageProps) {
                 </div>
             </div>
             <div className='md:px-12 px-4 mx-auto md:max-w-screen-xl w-full'>
-                {!quoteFilter && !nameFilter ? (
+                {!(quoteFilter || nameFilter) ? (
                     <EnterSearchTerm />
                 ) : (
                     <>
                         <h2 className='md:text-4xl text-2xl text-sky font-bold mt-2 tracking-wide'>
-                            Found {filteredQuotes?.length} result
-                            {filteredQuotes?.length !== 1 && 's'}
-                            {filteredQuotes?.length !== 0 ? ':' : '.'}
+                            Found {sortedQuotes?.length} result
+                            {sortedQuotes?.length !== 1 && 's'}
+                            {sortedQuotes?.length !== 0 ? ':' : '.'}
                         </h2>
                         <p className='text-lg text-overlay1 tracking-wide'>
                             Sorting by {sortMethod ?? 'oldest'}
