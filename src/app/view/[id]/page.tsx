@@ -2,6 +2,8 @@ import { Quote } from '@/data/quotes/quotes';
 import validQuotes from '@/data/quotes/quotes';
 import Link from 'next/link';
 
+export const runtime = 'edge';
+
 export default async function ViewQuote({
     params,
 }: {

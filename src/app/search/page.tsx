@@ -3,11 +3,12 @@ import QuoteForm from '@/components/search/QuoteForm';
 import QuoteResult from '@/components/search/QuoteResult';
 import { Quote } from '@/data/quotes/quotes';
 import ScrollToTop from '@/components/search/ScrollToTop';
-import classNames from 'classnames';
 
 interface SearchPageProps {
     searchParams?: Promise<{ quote: string; name: string; sort?: string }>;
 }
+
+export const runtime = 'edge';
 
 function EnterSearchTerm() {
     return (
