@@ -1,3 +1,5 @@
+'use client';
+
 import { Quote } from '@/data/quotes/quotes';
 import Link from 'next/link';
 
