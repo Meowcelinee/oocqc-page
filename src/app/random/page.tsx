@@ -2,15 +2,13 @@
 
 import RandomResult from '@/components/random/RandomResult';
 import { Quote } from '@/data/quotes/quotes';
-import randomQuote from '@/lib/randomQuote';
 import { useState } from 'react';
+import randomQuote from '@/lib/randomQuote';
 
 export default function RandomQuote() {
     const [quote, setQuote] = useState<Quote>(randomQuote());
-    const handleNewQuote = () => {
-        const q = randomQuote();
-        setQuote(q);
-    };
+
+    const handleNewQuote = () => setQuote(randomQuote());
 
     return (
         <div className='flex-col md:py-4 py-2'>
