@@ -681,7 +681,6 @@ const rawQuotes: string[] = [
     `"RogueIsGae banned 5iet for 'Rule Violation'" -Rogue`,
     `"Fuck this hole" -ChatTzar`,
     `"A doctor a day keeps the apple away" -Nellie`,
-    `"hello little boy, get on cam! >:)" -Beau`,
     `"how is breast feeding ur pets animal abuse ryan" -Martin`,
     `"i need daily updates on theos cum situation" -Cassi`,
     `"I am only experienced in warfare against children" -Dash`,
