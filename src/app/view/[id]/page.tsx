@@ -45,15 +45,17 @@ export default async function ViewQuote({
                         </div>
                     </Link>
                 )}
-                <Link
-                    href={`/view/${quote.id + 1}`}
-                    className='flex bg-surface0 rounded-2xl border-2 border-transparent drop-shadow-lg px-4 py-2 md:m-0 mx-auto transition duration-300 md:w-fit w-2/3 md:hover:bg-base md:hover:border-overlay2'
-                >
-                    <div className='flex gap-2 m-auto text-center'>
-                        Next quote
-                        <i className='nf nf-fa-arrow_right text-sm my-auto'></i>
-                    </div>
-                </Link>
+                {quote.id < validQuotes.length && (
+                    <Link
+                        href={`/view/${quote.id + 1}`}
+                        className='flex bg-surface0 rounded-2xl border-2 border-transparent drop-shadow-lg px-4 py-2 md:m-0 mx-auto transition duration-300 md:w-fit w-2/3 md:hover:bg-base md:hover:border-overlay2'
+                    >
+                        <div className='flex gap-2 m-auto text-center'>
+                            Next quote
+                            <i className='nf nf-fa-arrow_right text-sm my-auto'></i>
+                        </div>
+                    </Link>
+                )}
             </div>
         </div>
     );

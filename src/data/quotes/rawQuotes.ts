@@ -2,7 +2,7 @@ const rawQuotes: string[] = [
     `"THEY FUCK :D" -ChatTzar`,
     `"It's because we like people coming" -Skylar`,
     `"knockback I told you this would happen lmao. just relog, i will top you" -colserra`,
-    `"ok so not to break up the urethera talk but snow white but snow white just got kissed awake by a literal bear. not like the gay kind the animal" -Saige`,
+    `"okay so not break up the urethra talk but snow white just got kissed awake by a literal bear. not like the gay kind the animal" -Saige`,
     `"why do villagers have a food fetish" -Cassi`,
     `"get in the damn hole" -Verde`,
     `"i love a deranged submissing gameboy ds girl" -lia`,
