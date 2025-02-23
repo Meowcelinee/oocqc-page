@@ -24,6 +24,26 @@ export const metadata: Metadata = {
         locale: 'en_US',
         type: 'website',
     },
+
+    // block the site from appearing in search results, at beau's request
+    robots: {
+        index: false,
+        follow: false,
+        noarchive: true,
+        nocache: true,
+        noimageindex: true,
+        nositelinkssearchbox: true,
+        nosnippet: true,
+        googleBot: {
+            index: false,
+            follow: false,
+            noarchive: true,
+            nocache: true,
+            noimageindex: true,
+            nositelinkssearchbox: true,
+            nosnippet: true,
+        },
+    },
 };
 
 export default function RootLayout({
