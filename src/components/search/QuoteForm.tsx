@@ -4,6 +4,18 @@ import Form from 'next/form';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useDebouncedCallback } from 'use-debounce';
 
+function RemovalRequest() {
+    return (
+        <div className='w-full text-center pt-3 pb-1'>
+            <p className='text-overlay2 opacity-80'>
+                If you&apos;d like to have your quotes removed from this site
+                and/or the resource pack, message{' '}
+                <span className='italic'>@meowcelinee.</span> on Discord.
+            </p>
+        </div>
+    );
+}
+
 export default function QuoteForm() {
     const router = useRouter();
     const pathname = usePathname();
@@ -89,6 +101,7 @@ export default function QuoteForm() {
                     Sort by newest
                 </label>
             </div>
+            <RemovalRequest />
         </Form>
     );
 }
