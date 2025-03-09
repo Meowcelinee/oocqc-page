@@ -1,25 +1,19 @@
-import rawQuotes from './rawQuotes';
+import rawQuotes from './quotes.json' with { type: 'json' };
 
 type Quote = { quote: string; person: string; id: number };
 
-const validQuotes = rawQuotes.map(
-    (quote: string, quoteIndex: number): Quote => {
-        const splitQuote = quote.split(' -');
+const validQuotes: Quote[] = rawQuotes.map(quote =>  {
+    const finalAttribute = 
+        quote.attribute !== 'net.minecraft.server.events.PLAYER_DIES'
+        ? quote.attribute.replaceAll(`_`, ` `)
+        : quote.attribute;
 
-        const finalQuote = splitQuote[0].replaceAll(`"`, ``);
-
-        const finalAttribute =
-            splitQuote[1] !== 'net.minecraft.server.events.PLAYER_DIES'
-                ? splitQuote[1].replaceAll(`_`, ` `)
-                : splitQuote[1];
-
-        return {
-            quote: finalQuote,
-            person: finalAttribute,
-            id: quoteIndex + 1,
-        };
+    return {
+        quote: quote.quote,
+        person: finalAttribute,
+        id: quote.id,
     }
-);
+})
 
 export default validQuotes;
 export type { Quote };
