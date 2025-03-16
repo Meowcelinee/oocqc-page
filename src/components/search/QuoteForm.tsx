@@ -21,13 +21,17 @@ export default function QuoteForm() {
     const pathname = usePathname();
     const searchParams = useSearchParams();
 
-    /* 
-    update url with search parameters --- used for quote *and* name queries.
-    useDebounced creates delay between keystroke and search
-    */
+    /*
+     *  update url with search parameters --- used for quote *and* name queries.
+     *  useDebounced creates delay between keystroke and search
+     */
     const handleSearch = useDebouncedCallback(
         (query: string, value: string) => {
+            // new object for modifying the current search params (from useSearchParams())
             const params = new URLSearchParams(searchParams);
+
+            // remove whitespace from search value, if value exists
+            value = value.trim() ?? undefined;
 
             // if value doesnt exist, remove the *whole query* from the url
             value ? params.set(query, value) : params.delete(query);
@@ -60,7 +64,9 @@ export default function QuoteForm() {
                         name='quote'
                         className='bg-surface0 rounded-md border-surface1 border-2 drop-shadow-lg text-lg py-2 px-2 mx-auto w-full transition duration-300 focus:outline-none focus:border-sky focus:bg-base'
                         placeholder='Quote / Keywords'
-                        onChange={e => handleSearch('quote', e.target.value)}
+                        onChange={input =>
+                            handleSearch('quote', input.target.value)
+                        }
                         defaultValue={searchParams.get('quote')?.toString()}
                         autoComplete='off'
                     />
@@ -73,7 +79,9 @@ export default function QuoteForm() {
                         name='author'
                         className='bg-surface0 rounded-md border-surface1 border-2 drop-shadow-lg text-lg py-2 px-2 mx-auto w-full transition duration-300 focus:outline-none focus:border-pink focus:bg-base'
                         placeholder='Name'
-                        onChange={e => handleSearch('name', e.target.value)}
+                        onChange={input =>
+                            handleSearch('name', input.target.value)
+                        }
                         defaultValue={searchParams.get('name')?.toString()}
                         autoComplete='off'
                     />
@@ -86,7 +94,7 @@ export default function QuoteForm() {
                         name='sort'
                         value='oldest'
                         className='mr-2'
-                        onChange={e => handleSort(e.target.value)}
+                        onChange={input => handleSort(input.target.value)}
                     />
                     Sort by oldest
                 </label>
@@ -96,7 +104,7 @@ export default function QuoteForm() {
                         name='sort'
                         value='newest'
                         className='mr-2'
-                        onChange={e => handleSort(e.target.value)}
+                        onChange={input => handleSort(input.target.value)}
                     />
                     Sort by newest
                 </label>
