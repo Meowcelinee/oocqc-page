@@ -13,6 +13,9 @@ export default function Releases(props: Release) {
                         For Minecraft{' '}
                         <span className='text-pink'>{props.mcVersion}</span>
                     </p>
+                    <p className='text-subtext0 tracking-wide mt-1 mb-2'>
+                        Released {props.releaseDate}
+                    </p>
                 </div>
                 <div className=''>
                     <h3 className='md:text-xl text-lg font-medium text-subtext1'>

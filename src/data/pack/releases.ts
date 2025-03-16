@@ -1,6 +1,7 @@
 interface Release {
     downloadUrl: string;
     mcVersion: string;
+    releaseDate: string;
     sourceUrl: string;
     version: string;
     notes: string[];
@@ -11,6 +12,7 @@ const releases: Release[] = [
         downloadUrl:
             'https://github.com/Meowcelinee/OOCQC/releases/download/v1.4.0/OOCQC-v1.4.0-1.21.zip',
         mcVersion: '1.21.1',
+        releaseDate: 'December 14, 2024',
         sourceUrl: 'https://github.com/Meowcelinee/OOCQC/releases/v1.4.0/',
         version: '1.4.0',
         notes: [
@@ -24,6 +26,7 @@ const releases: Release[] = [
         downloadUrl:
             'https://github.com/Meowcelinee/OOCQC/releases/download/v1.3.3/OOCQC-v1.3.3-1.20.4.zip',
         mcVersion: '1.20.4',
+        releaseDate: 'May 30, 2024',
         sourceUrl: 'https://github.com/Meowcelinee/OOCQC/releases/v1.3.3/',
         version: '1.3.3',
         notes: ['Added quotes posted throughout the month of May'],
@@ -32,6 +35,7 @@ const releases: Release[] = [
         downloadUrl:
             'https://github.com/Meowcelinee/OOCQC/releases/download/v1.3.2/OOCQC-v1.3.2-1.20.4.zip',
         mcVersion: '1.20.4',
+        releaseDate: 'May 5, 2024',
         sourceUrl: 'https://github.com/Meowcelinee/OOCQC/releases/v1.3.2/',
         version: '1.3.2',
         notes: [
