@@ -11,11 +11,13 @@ with urllib.request.urlopen(url) as raw_txt:
         split_quote = splash.split('\" -')
         quote = split_quote[0].replace('\"', '')
         attribute = split_quote[1].replace('\n', '') if len(split_quote) > 1 else 'Unknown'
-        splashes.append({
-            'quote': quote.replace('\"', ''),
-            'attribute': attribute,
-            'id': len(splashes) + 1
-        })
+        
+        if not quote == '':
+            splashes.append({
+                'quote': quote.replace('\"', ''),
+                'attribute': attribute,
+                'id': len(splashes) + 1
+            }) 
 
 with open('../../data/quotes/quotes.json', 'w') as quotes:
     new_json = json.dumps(splashes, indent=4)
