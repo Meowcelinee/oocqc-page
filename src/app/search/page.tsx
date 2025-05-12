@@ -28,6 +28,8 @@ export default async function SearchPage(props: SearchPageProps) {
 
     const handleFilter = (quotes: Quote[]): Quote[] | void => {
         if (!quoteFilter && !nameFilter) return;
+
+        // filter quotes based on the quote filter and the person filter
         return quotes
             .filter(q =>
                 quoteFilter
@@ -70,6 +72,13 @@ export default async function SearchPage(props: SearchPageProps) {
                 ) : (
                     <>
                         <h2 className='md:text-4xl text-2xl text-sky font-bold mt-2 tracking-wide'>
+                            {/* 
+                            modify the text based on the number of quotes found.
+                            examples:
+                                "Found 23 results:"
+                                "Found 1 result:"
+                                "Found 0 results."
+                            */}
                             Found {sortedQuotes?.length} result
                             {sortedQuotes?.length !== 1 && 's'}
                             {sortedQuotes?.length !== 0 ? ':' : '.'}
@@ -86,7 +95,7 @@ export default async function SearchPage(props: SearchPageProps) {
                 )}
             </div>
             <div className='flex justify-center'>
-                <ScrollToTop length={filteredQuotes?.length} />
+                <ScrollToTop length={sortedQuotes?.length} />
             </div>
         </div>
     );

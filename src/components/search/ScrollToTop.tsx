@@ -8,7 +8,7 @@ export default function ScrollToTop(quoteArray: ScrollButtonProps) {
             ? undefined
             : window.scrollTo({ top: 0, behavior: 'smooth' });
 
-    // do not render if the quote count is less than 10 (early return)
+    // do not render if the quote count is less than 10
     if (!quoteArray.length || quoteArray.length < 10) return;
 
     return (
