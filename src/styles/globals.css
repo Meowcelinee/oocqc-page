@@ -9,20 +9,6 @@
     color: #181926;
 }
 
-body {
-    font-family: 'Hind Vadodara';
-}
-
-footer {
-    font-family: 'Merriweather Sans';
-}
-
-#oocqc,
-#quote,
-#releases {
-    font-family: 'Merriweather Sans';
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

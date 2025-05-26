@@ -1,9 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { fonts } from '@/app/layout';
 
 export default function Footer() {
     return (
-        <footer className='py-4 md:px-4 px-2 text-subtext0 text-xs font-light'>
+        <footer
+            className={`py-4 md:px-4 px-2 text-subtext0 text-xs font-light ${fonts.merriweather.className}`}
+        >
             <div className='flex md:flex-row flex-col justify-between md:gap-1 md:text-left text-center align-middle'>
                 <div className='flex flex-col gap-1 my-auto'>
                     <p className='my-1'>

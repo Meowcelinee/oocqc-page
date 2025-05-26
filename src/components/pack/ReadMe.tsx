@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import reviews from '@/data/pack/reviews';
+import { fonts } from '@/app/layout';
 
 function Reviews() {
     return reviews.map((review, reviewKey) => {
@@ -10,7 +11,9 @@ function Reviews() {
                     className='bg-crust text-lg mt-4 mb-2 px-3 py-3 border-l-8 border-l-base transition duration-300 md:hover:border-l-surface0 md:hover:bg-mantle md:hover:brightness-105'
                     key={reviewKey}
                 >
-                    <p id='oocqc'>&quot;{review.text}&quot;</p>
+                    <p className={fonts.merriweather.className}>
+                        &quot;{review.text}&quot;
+                    </p>
                 </div>
                 <p className='font-medium'>--{review.reviewer}</p>
             </>

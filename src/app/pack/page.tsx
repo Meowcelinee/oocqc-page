@@ -2,6 +2,7 @@ import Link from 'next/link';
 import ReadMe from '@/components/pack/ReadMe';
 import Releases from '@/components/pack/Releases';
 import releases from '@/data/pack/releases';
+import { fonts } from '../layout';
 
 export default function DownloadPage() {
     return (
@@ -24,8 +25,7 @@ export default function DownloadPage() {
                 </div>
                 <div className='rounded-lg border-[1px] border-surface1 my-4 py-2 px-4'>
                     <h2
-                        className='font-semibold md:text-3xl text-2xl my-2'
-                        id='releases'
+                        className={`font-semibold md:text-3xl text-2xl my-2 ${fonts.merriweather.className}`}
                     >
                         Releases
                     </h2>

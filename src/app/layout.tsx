@@ -3,6 +3,47 @@ import Footer from '@/components/Footer';
 import '@/styles/globals.css';
 import Header from '@/components/header/Header';
 
+import {
+    Hind_Vadodara,
+    IBM_Plex_Sans,
+    JetBrains_Mono,
+    Jost,
+    Merriweather_Sans,
+} from 'next/font/google';
+
+const vadodara = Hind_Vadodara({
+    weight: ['300', '400', '500', '600', '700'],
+    subsets: ['latin'],
+});
+
+const plexSans = IBM_Plex_Sans({
+    weight: ['300', '400', '500', '600', '700'],
+    subsets: ['latin'],
+});
+
+const jetbrains = JetBrains_Mono({
+    weight: ['300', '400', '500', '600', '700'],
+    subsets: ['latin'],
+});
+
+const jost = Jost({
+    weight: ['300', '400', '500', '600', '700'],
+    subsets: ['latin'],
+});
+
+const merriweather = Merriweather_Sans({
+    weight: ['300', '400', '500', '600', '700'],
+    subsets: ['latin'],
+});
+
+export const fonts = {
+    vadodara,
+    plexSans,
+    jetbrains,
+    jost,
+    merriweather,
+};
+
 export const metadata: Metadata = {
     title: 'OOCQC',
     description: 'Queercraft, out of context.',
@@ -51,7 +92,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
     return (
         <html lang='en' className='scroll-smooth'>
-            <body className='bg-mantle text-text'>
+            <body className={`bg-mantle text-text ${fonts.vadodara.className}`}>
                 <Header />
                 <main className='bg-base'>{children}</main>
                 <Footer />
