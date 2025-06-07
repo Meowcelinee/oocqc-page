@@ -2,7 +2,7 @@ import Image from 'next/image';
 import getPlayerSkin from '@/lib/getPlayerSkin';
 import classNames from 'classnames';
 import { amelia, marceline } from '@/data/authors';
-import { fonts } from '@/app/layout';
+import fonts from '@/fontConfig';
 
 type PlayerHeadSource = { name: string; flipped?: boolean };
 

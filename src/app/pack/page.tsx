@@ -2,7 +2,7 @@ import Link from 'next/link';
 import ReadMe from '@/components/pack/ReadMe';
 import Releases from '@/components/pack/Releases';
 import releases from '@/data/pack/releases';
-import { fonts } from '../layout';
+import fonts from '@/fontConfig';
 
 export default function DownloadPage() {
     return (

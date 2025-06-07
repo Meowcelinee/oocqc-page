@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import reviews from '@/data/pack/reviews';
-import { fonts } from '@/app/layout';
+import fonts from '@/fontConfig';
 
 function Reviews() {
     return reviews.map((review, reviewKey) => {

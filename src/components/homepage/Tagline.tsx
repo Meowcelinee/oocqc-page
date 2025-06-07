@@ -1,4 +1,4 @@
-import { fonts } from '@/app/layout';
+import fonts from '@/fontConfig';
 
 export default function Tagline() {
     return (
